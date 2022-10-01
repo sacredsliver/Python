@@ -7,8 +7,8 @@ print(k)
 nego = [1,-1]
 fibo = [1,1]
 for i in range(2,k):
-    list = fibo[i-1]+fibo[i-2]
-    fibo.append(list)
+    lst_fibo = fibo[i-1]+fibo[i-2]
+    fibo.append(lst_fibo)
 for x, elem in enumerate(fibo, 2):
     if x % 2 != 0:
         lst_nego = elem * -1
