@@ -3,9 +3,9 @@
 # - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
 
 lst = [1.1, 1.2, 3.1, 5, 10.01]
-new_lst = []
-for i in lst:
-    if i%1 != 0:
-        new_lst.append(round(i%1,2))
-        print(new_lst)
+new_lst = [round(i%1,2) for i in lst if i%1 != 0]
+# for i in lst:
+#     if i%1 != 0:
+#         new_lst.append(round(i%1,2))
+#         print(new_lst)
 print(max(new_lst) - min(new_lst))
