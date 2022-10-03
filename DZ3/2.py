@@ -6,5 +6,5 @@
 lst = [2, 3, 5, 6]
 proizved_lst = []
 for i in range((len(lst)+1)//2):
-    proizved_lst.append(lst[i]*lst[len(lst)-1-i])
+    proizved_lst.append(lst[i]*lst[-1-i])
 print(proizved_lst)
