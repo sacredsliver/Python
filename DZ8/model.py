@@ -10,8 +10,18 @@ def add (db):
 
 def del_value (id):
     db = con.open_db()
-    db.pop(id)
+    db.discard(id)
     con.save_db(db)
+
+def edit_value ():
+    db = con.open_db()
+    print_db(db)
+    id = int(input('Введите ИД записи которую надо редактировать - '))
+    print(db[id])
+    value = input('Введите новое значение - ')
+    db[id] = value
+    con.save_db(db)
+    print_db(db)
     
 
 def print_db(db):

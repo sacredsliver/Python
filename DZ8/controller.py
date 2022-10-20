@@ -1,5 +1,3 @@
-
-
 def open_db():
     with open('db.txt', 'r', encoding = 'utf-8') as data:
         onstring = data.read().split("\n")[:-1]
