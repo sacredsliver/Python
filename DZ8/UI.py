@@ -17,6 +17,7 @@ def input_int(msg=""):
 
 def main_menu():
     global finish
+    db = con.open_db()
     print('Добро пожаловать в БД')
     print('Введите номер операции:')
     print('Показать все записи справочника - 1')
@@ -26,15 +27,13 @@ def main_menu():
     print('Выход - 0')
     option = input_int()
     if option == 1:
-        db = con.open_db()
         md.print_db(db)
         input("Нажмите Enter для продолжения...")
     elif option == 2:
-        db = con.open_db()
         md.add(db)
         input("Нажмите Enter для продолжения...")
     elif option == 3:
-        md.print_db(con.open_db())
+        md.print_db(db)
         md.del_value(input_int("Введите номер записи для удаления: "))
         input("Нажмите Enter для продолжения...")
     elif option == 4:
