@@ -3,7 +3,7 @@ from telebot import types
 import model as md
 import controller as con
 
-TOKEN = "5501756584:AAEw3bT6QibRgjGBP1enKb5diEZXmRVMfmU"
+TOKEN = ""
 bot = telebot.TeleBot(TOKEN)
 
 
